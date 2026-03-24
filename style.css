@@ -11,6 +11,14 @@
     font-display: swap; /* Improves loading performance */
 }
 
+@font-face {
+    font-family: 'PP Neue Montreal',sans-serif;
+    src: url('fonts/NeueMontreal-Regular.otf') format('woff2');
+    font-weight: 400; /* Adjust according to file */
+    font-style: normal;
+    font-display: swap; /* Improves loading performance */
+}
+
 
 /* ── RESET ── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -62,7 +70,7 @@ body { font-family:'Montserrat',sans-serif; background:#f5f0eb; overflow-x:hidde
 }
 @media (min-width:768px) { .pre-logo { top:34px; right:50px; } }
 .pre-logo svg  { width:22px; }
-.pre-logo span { font-family:'PP Neue Montreal', 'Montserrat', sans-serif; font-weight:400; letter-spacing:4px; font-size:12px; color:#fff; }
+.pre-logo span { font-family:'PP Neue Montreal',sans-serif; font-weight:400; letter-spacing:4px; font-size:12px; color:#fff; }
 @media (min-width:768px) { .pre-logo span { font-size:14px; } }
 
 .counter { display:flex; height:80px; align-items:flex-end; overflow:hidden; position:relative; z-index:3; }
@@ -285,7 +293,7 @@ body { font-family:'Montserrat',sans-serif; background:#f5f0eb; overflow-x:hidde
   text-align:center; z-index:10; width:90%; will-change:opacity;
 }
 @media (min-width:768px) { .hero-txt { width:85%; } }
-.hero-txt .kicker { display:block; font-size:16px; color:rgb(255,255,255); margin-bottom:12px; font-family:'PP Neue Montreal','Montserrat',sans-serif; }
+.hero-txt .kicker { display:block; font-size:16px; color:rgb(255,255,255); margin-bottom:12px; font-family:'PP Neue Montreal',sans-serif; }
 @media (min-width:768px) { .hero-txt .kicker { font-size:10px; margin-bottom:14px; } }
 .hero-txt h1 {font-family:'Boska'; font-size:clamp(32px,7vw,70px);font-weight: 400; color:#fff; line-height:1.08; margin-bottom:22px; }
 @media (min-width:768px) { .hero-txt h1 { font-size:clamp(40px,5.5vw,70px); margin-bottom:28px; } }
