@@ -1,6 +1,17 @@
   @import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
   body { font-family: 'PP Neue Montreal', sans-serif; }
 
+@font-face {
+    font-family: 'Boska';
+    src: url('fonts/Boska-Regular.otf') format('woff2'),
+         url('fonts/Boska-Regular.woff') format('woff'),
+         url('fonts/Boska-Regular.ttf') format('truetype');
+    font-weight: 400; /* Adjust according to file */
+    font-style: normal;
+    font-display: swap; /* Improves loading performance */
+}
+
+
 /* ── RESET ── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -276,7 +287,7 @@ body { font-family:'Montserrat',sans-serif; background:#f5f0eb; overflow-x:hidde
 @media (min-width:768px) { .hero-txt { width:85%; } }
 .hero-txt .kicker { display:block; font-size:16px; color:rgb(255,255,255); margin-bottom:12px; font-family:'PP Neue Montreal','Montserrat',sans-serif; }
 @media (min-width:768px) { .hero-txt .kicker { font-size:10px; margin-bottom:14px; } }
-.hero-txt h1 {font-family:'Boska',serif; font-size:clamp(32px,7vw,70px);font-weight: 400; color:#fff; line-height:1.08; margin-bottom:22px; }
+.hero-txt h1 {font-family:'Boska'; font-size:clamp(32px,7vw,70px);font-weight: 400; color:#fff; line-height:1.08; margin-bottom:22px; }
 @media (min-width:768px) { .hero-txt h1 { font-size:clamp(40px,5.5vw,70px); margin-bottom:28px; } }
 .hero-txt .cta { font-size:15px; letter-spacing:4px; text-transform:uppercase; color:#fff; text-decoration:none; cursor:none; padding-bottom:4px; transition:border-color .3s; }
 @media (hover:none) and (pointer:coarse) { .hero-txt .cta { cursor:pointer; } }
