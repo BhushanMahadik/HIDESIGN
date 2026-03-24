@@ -11,19 +11,14 @@
     font-display: swap; /* Improves loading performance */
 }
 
-@font-face {
-    font-family: 'PP Neue Montreal',sans-serif;
-    src: url('fonts/NeueMontreal-Regular.otf') format('woff2');
-    font-weight: 400; /* Adjust according to file */
-    font-style: normal;
-    font-display: swap; /* Improves loading performance */
-}
+@import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
+
 
 
 /* ── RESET ── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { font-family:'Montserrat',sans-serif; background:#f5f0eb; overflow-x:hidden; cursor:none; }
+body { font-family: 'PP Neue Montreal', sans-serif; background:#f5f0eb; overflow-x:hidden; cursor:none; }
 :root { --cream:#f5f0eb; --dark:#0c0a08; --brown:#6b4226; --text:#1a1209; }
 
 /* ── CUSTOM CURSOR ── */
