@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HIDESIGN</title>
+<link href="https://fonts.cdnfonts.com/css/boska" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="curR"></div>
+
+<!-- ══ PRELOADER ══ -->
+<div id="preloader">
+  <div class="pre-logo" id="preLogo">
+    <img src="/Images/Logo SVG1.png" style="width:150px;height:150px;object-fit:contain;filter:invert(0);margin:-25px;"/>
+  </div>
+  <div class="counter">
+    <div class="digit-col"><div class="digit-track" id="dth"></div></div>
+    <div class="digit-col"><div class="digit-track" id="dtt"></div></div>
+    <div class="digit-col"><div class="digit-track" id="dto"></div></div>
+  </div>
+  <div class="pre-bar" id="preBar"></div>
+</div>
+
+<!-- ══ WHITE COVER ══ -->
+<div id="white-cover"></div>
+
+<!-- ══ SPLIT PANELS ══ -->
+<div id="intro">
+
+  <!-- LEFT PANEL -->
+  <div class="ipanel l" id="ipanelL">
+    <video class="ipanel-video" autoplay muted loop playsinline preload="auto" style="object-fit:cover;">
+      <source src="/Video/Split2.mp4" type="video/mp4">
+    </video>
+    <div class="ipanel-label" id="labelLuxury">Luxury</div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="ipanel r" id="ipanelR">
+    <video class="ipanel-video" autoplay muted loop playsinline preload="auto" style="object-fit:cover;">
+      <source src="/Video/WhatsApp Video 2026-03-18 at 12.43.33 AM.mp4" type="video/mp4">
+    </video>
+    <div class="ipanel-label" id="labelClassic">Classic</div>
+  </div>
+
+</div>
+
+<!-- ── Vertical divider ── -->
+<div id="divider"></div>
+
+<!-- ══ CENTER LOGO ══ -->
+<div id="panel-logo">
+  <img src="/Images/Logo SVG.png" alt="HIDESIGN"/>
+</div>
+
+<!-- ══ ENTRY RING ══ -->
+<div id="entry-ring">
+  <div class="entry-ring-wrap">
+    <svg class="er-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+      <circle class="er-fill" id="erFill" cx="80" cy="80" r="72"/>
+      <circle class="er-track" cx="80" cy="80" r="72"/>
+      <circle class="er-progress" id="erProgress" cx="80" cy="80" r="72"
+        stroke-dasharray="452.4" stroke-dashoffset="452.4"/>
+    </svg>
+    <img class="er-logo-inner" id="erLogoInner" src="/Images/Logo SVG.png"/>
+  </div>
+</div>
+
+
+
+<!-- ══ DRAWER OVERLAY ══ -->
+<div id="drawer-overlay" onclick="closeDrawer()"></div>
+
+<!-- ══ DRAWER MENU ══ -->
+<div id="drawer">
+  <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="drawer-brand">
+    <img src="/Images/Logo SVG1.png" style="width:22px;height:22px;object-fit:contain;filter:invert(1);"/>
+    <span>HIDESIGN</span>
+  </div>
+  <ul class="drawer-nav">
+    <li><a href="#"><div><span class="dn-kicker">Navigate</span><span class="dn-title">Home</span></div><div class="dn-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></a></li>
+    <li><a href="#arrivals" onclick="closeDrawer()"><div><span class="dn-kicker">Latest Drops</span><span class="dn-title">New Arrivals</span></div><div class="dn-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></a></li>
+    <li><a href="#categories" onclick="closeDrawer()"><div><span class="dn-kicker">Collections</span><span class="dn-title">Explore More</span></div><div class="dn-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></a></li>
+    <li><a href="#"><div><span class="dn-kicker">About Us</span><span class="dn-title">Our Story</span></div><div class="dn-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></a></li>
+  </ul>
+  <div class="drawer-bottom">
+    <div class="drawer-social">
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.28-5.43 1.28-5.43s-.33-.65-.33-1.62c0-1.52.88-2.65 1.97-2.65.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.54 1.97 1.6 1.97 1.92 0 3.4-2.02 3.4-4.95 0-2.59-1.86-4.4-4.52-4.4-3.08 0-4.89 2.31-4.89 4.69 0 .93.36 1.92.8 2.47a.32.32 0 0 1 .07.31c-.08.34-.27 1.09-.3 1.24-.05.2-.17.24-.38.15-1.4-.65-2.27-2.7-2.27-4.35 0-3.54 2.57-6.79 7.41-6.79 3.89 0 6.91 2.77 6.91 6.47 0 3.86-2.43 6.97-5.81 6.97-1.14 0-2.2-.59-2.57-1.28l-.7 2.6c-.25.97-.93 2.19-1.39 2.93C11.05 21.93 11.52 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a>
+    </div>
+    <p class="drawer-copy">© 2024 HIDESIGN — Crafted with Heritage</p>
+  </div>
+</div>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="nav">
+  <div class="nav-l">
+    <button class="nbtn" id="menuBtn" onclick="openDrawer()" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" stroke-width="1.4">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <button class="nsrch" aria-label="Search">
+      <svg viewBox="0 0 24 24" stroke-width="1.4">
+        <circle cx="11" cy="11" r="7"/>
+        <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+      </svg>
+      <span style="font-family:'PP Neue Montreal',sans-serif;font-size:16px;">Search</span>
+    </button>
+  </div>
+  <div class="nav-c">
+    <a href="#" class="nlogo">
+      <img class="nlogoimg" src="/Images/Logo SVG1.png" alt="HIDESIGN"/>
+    </a>
+  </div>
+  <div class="nav-r">
+    <button class="nbtn" aria-label="Wishlist">
+      <svg viewBox="0 0 24 24" stroke-width="1.4">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+    </button>
+    <button class="nbtn" aria-label="Bag">
+      <svg viewBox="0 0 24 24" stroke-width="1.4">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ SCROLL SCENE ══ -->
+<div id="scene-wrap">
+  <div id="scene">
+
+    <div class="scard" id="card-l">
+      <div class="sbg sbg-l"></div>
+      <div class="sov" style="background-image:url(/Images/Hero1.png);background-size:cover;">
+        <span class="sk">Crafted From Genuine Leather</span>
+        <h3>Atelier</h3>
+        <a href="#" class="se">EXPLORE</a>
+      </div>
+    </div>
+
+    <div id="hero">
+      <video class="hero-video" src="Video/7622153-uhd_4096_2160_25fps.mp4" autoplay muted loop playsinline preload="auto"></video>
+      <div class="hero-video-overlay"></div>
+      <div class="hero-txt" id="heroTxt">
+        <span class="kicker" style="font-size:16px;letter-spacing:1px;color:white;">Exquisite Leather Jackets</span>
+        <h1>The Fifth Avenue Collection</h1>
+        <a href="#categories" class="cta">EXPLORE</a>
+      </div>
+      <div class="card-txt" id="cardTxt">
+        <span class="ck">Exquisite Leather Jackets</span>
+        <h3>The Fifth Avenue<br>Collection</h3>
+        <a href="#" class="ce">EXPLORE</a>
+      </div>
+    </div>
+
+    <div class="scard" id="card-r">
+      <div class="sbg sbg-r"></div>
+      <div class="sov" style="background-image:url(/Images/Hero2.png);background-size:cover;">
+        <span class="sk" style="color:white;">Reviving Centuries-Old Craftsmanship</span>
+        <h3>East India<br>Leather</h3>
+        <a href="#" class="se">EXPLORE</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ CATEGORIES ══ -->
+<section id="categories">
+  <h2 class="sec-h" id="catH">Explore Categories</h2>
+  <div class="cats">
+    <div class="cat"><div class="cat-img"><div class="ci1"></div></div><p class="cat-name">Laptop Bag</p></div>
+    <div class="cat"><div class="cat-img"><div class="ci2"></div></div><p class="cat-name">Footwear</p></div>
+    <div class="cat"><div class="cat-img"><div class="ci3"></div></div><p class="cat-name">Sling Bag</p></div>
+    <div class="cat"><div class="cat-img"><div class="ci4"></div></div><p class="cat-name">Shoulder Bag</p></div>
+    <div class="cat"><div class="cat-img"><div class="ci5"></div></div><p class="cat-name">Wallet</p></div>
+    <div class="cat"><div class="cat-img"><div class="ci6"></div></div><p class="cat-name">Sunglasses</p></div>
+    <div class="cat"><div class="cat-img"><div class="ci7"></div></div><p class="cat-name">Duffle Bag</p></div>
+    <div class="cat"><div class="cat-img"><div class="ci8"></div></div><p class="cat-name">Leather Jacket</p></div>
+  </div>
+</section>
+
+<!-- ══ FALL STRIP ══ -->
+<section id="fall">
+  <div class="fall-strip" id="fallStrip">
+
+    <!-- fb1: video card with custom controls on hover -->
+    <div class="fi" id="fb1Card">
+      <div class="fibg fb1"></div>
+      <video class="fi-video" id="fb1Video" src="/Video/7621848-uhd_4096_2160_25fps.mp4" autoplay muted loop playsinline preload="auto"></video>
+      <div class="fi-video-overlay"></div>
+      <div class="fi-content"><h2 class="fi-title">Fall Collection '24</h2></div>
+      <!-- Custom mini video controls, visible only on hover -->
+      <div class="fi-video-controls" id="fb1Controls">
+        <div class="fi-vc-inner">
+          <button class="fi-vc-btn" id="fb1PlayBtn" onclick="toggleFb1Play(event)" title="Play / Pause">
+            <svg id="fb1PlayIcon" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="fi-progress-wrap" id="fb1ProgressWrap" onclick="seekFb1(event)" title="Seek">
+            <div class="fi-progress-bar" id="fb1ProgressBar"></div>
+          </div>
+          <span class="fi-time" id="fb1Time">0:00</span>
+          <button class="fi-vc-btn" onclick="toggleFb1Mute(event)" title="Mute / Unmute">
+            <svg id="fb1MuteIcon" viewBox="0 0 24 24">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="fi">
+      <div class="fibg fb2"></div>
+      <div class="fi-video-overlay"></div>
+      <div class="fi-content"><h2 class="fi-title">Fall Collection '24</h2></div>
+    </div>
+    <div class="fi">
+      <div class="fibg fb3"></div>
+      <div class="fi-video-overlay"></div>
+      <div class="fi-content"><h2 class="fi-title">Fall Collection '24</h2></div>
+    </div>
+    <div class="fi">
+      <div class="fibg fb4"></div>
+      <div class="fi-video-overlay"></div>
+      <div class="fi-content"><h2 class="fi-title">Fall Collection '24</h2></div>
+    </div>
+    <div class="fi">
+      <div class="fibg fb5"></div>
+      <div class="fi-video-overlay"></div>
+      <div class="fi-content"><h2 class="fi-title">Fall Collection '24</h2></div>
+    </div>
+  </div>
+  <div class="fall-nav">
+    <button class="fnbtn" onclick="scrollFall(-1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button class="fnbtn" onclick="scrollFall(1)"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+</section>
+
+<!-- ══ ARRIVALS ══ -->
+<section id="arrivals">
+  <h2 class="sec-h" id="arrivH">Explore a Collection of New Arrivals</h2>
+  <div class="ag">
+    <div class="prod"><div class="prod-img"><div class="pi1"><div class="contain"></div></div><button class="pwish"><svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button></div><p class="prod-name">Heathrow 05 Briefcase</p><p class="prod-price">₹ 12,000</p></div>
+    <div class="prod"><div class="prod-img"><div class="pi2"></div><button class="pwish"><svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button></div><p class="prod-name">Heritage Tote Bag</p><p class="prod-price">₹ 9,500</p></div>
+    <div class="prod"><div class="prod-img"><div class="pi3"></div><button class="pwish"><svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button></div><p class="prod-name">Artisan Sling Bag</p><p class="prod-price">₹ 6,800</p></div>
+    <div class="prod"><div class="prod-img"><div class="pi4"></div><button class="pwish"><svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button></div><p class="prod-name">Classic Wallet</p><p class="prod-price">₹ 3,200</p></div>
+    <div class="prod"><div class="prod-img"><div class="pi5"></div><button class="pwish"><svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button></div><p class="prod-name">Traveller Duffle</p><p class="prod-price">₹ 15,000</p></div>
+    <div class="prod"><div class="prod-img"><div class="pi6"></div><button class="pwish"><svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button></div><p class="prod-name">Artisan Sling Bag</p><p class="prod-price">₹ 6,800</p></div>
+    <div class="prod"><div class="prod-img"><div class="pi7"></div><button class="pwish"><svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button></div><p class="prod-name">Heritage Tote Bag</p><p class="prod-price">₹ 9,500</p></div>
+    <div class="prod"><div class="prod-img"><div class="pi8"></div><button class="pwish"><svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button></div><p class="prod-name">Heathrow 05 Briefcase</p><p class="prod-price">₹ 12,000</p></div>
+  </div>
+</section>
+
+<script src="/script.js"></script>
+</body>
+</html>
